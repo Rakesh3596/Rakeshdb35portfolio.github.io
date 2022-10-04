@@ -44,6 +44,7 @@
                 <div class="text-3">Java Backend <span class="typing"></span></div>
                 <a href="images/Rakesh_DB_Resume.pdf" download>Resume</a>
                 <div class="hero"><img src="images/rakPhoto1.jpg" alt=""></div>
+                <div id="conr">
                 <div class="contact-icon">                   
                     <a href="https://github.com/Rakesh3596" target="_blank">
                         <i class="fab fa-github"></i>
@@ -54,7 +55,7 @@
                         <a href="https://www.linkedin.com/in/rakesh-d-b-098852231/" target="_blank">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                    </div>                  
+                    </div>  </div>                
                 </div>
                 
             </div>
@@ -247,7 +248,8 @@
             </div>
         </div>
         <div class="gitst">
-            <img src="images/githubstatus.PNG" alt="">
+            <a href="https://github.com/Rakesh3596" target="_blank"> <img src="images/githubstatus.PNG" alt=""></a>
+            
             
         </div>
         <div class="gt"><h3>Github status</h3></div>
@@ -283,7 +285,7 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/port2.png" alt="">
+                        <img src="images/youtub.PNG" alt="">
                         <div class="text">YouTube Clone</div>
                         <p>&#9656; YouTube is an American online video sharing and social media platform, 
                             Where users can see varieties of videos of all categories.
@@ -294,7 +296,7 @@
                         <p>&nbsp</p>
                         <div class="ico">
                             <div>
-                            <a href="https://github.com/masai-course/Rakeshdb_fw18_0608/tree/master/unit-3/sprint-3/day-1/assignments/youtube" target="_blank"  class="icon">
+                            <a href="https://github.com/Rakesh3596/Youtube-App" target="_blank"  class="icon">
                                 <i class="fab fa-github"></i>
                             </a></div>
                             <p>&nbsp &nbsp &nbsp &nbsp</p>
@@ -318,7 +320,7 @@
                         <p>&nbsp</p>
                         <div class="ico">
                             <div>
-                            <a href="https://github.com/masai-course/Rakeshdb_fw18_0608/tree/master/unit-3/sprint-2/day-4/you/weather%20app%20using%20APi" target="_blank"  class="icon">
+                            <a href="https://github.com/Rakesh3596/weather-App" target="_blank"  class="icon">
                                 <i class="fab fa-github"></i>
                             </a></div>
                             <p>&nbsp &nbsp &nbsp &nbsp</p>
@@ -341,7 +343,7 @@
                    <p>&nbsp</p>
                    <div class="ico">
                     <div>
-                    <a href="https://github.com/masai-course/Rakeshdb_fw18_0608/tree/master/unit-4/sprint-4/Async-Prog-Assignment-Template" target="_blank"  class="icon">
+                    <a href="https://github.com/Rakesh3596/movie-app/tree/main/Async-Prog-Assignment-Template" target="_blank"  class="icon">
                         <i class="fab fa-github"></i>
                     </a></div>
                     <p>&nbsp &nbsp &nbsp &nbsp</p>
@@ -413,20 +415,20 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form onsubmit="sendmail(); reset(); return false;">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" id="name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" id="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" id="sub" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea id="msg" cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
@@ -443,5 +445,26 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendmail(){
+            Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "rakeshdb9141@gmail.com",
+        Password : "6138DDB4695485B8AE4D0D5AEDF0E21EBA1A",
+        To : 'rakeshdb9141@gmail.com',
+        From : "rakeshdb9141@gmail.com",
+        Subject : "New message",
+        Body : "Name: "+document.getElementById("name").value
+                +"<br> email: "+document.getElementById("email").value
+                +"<br> msg: "+document.getElementById("msg").value
+}).then(
+  message => alert("message sent succesfully")
+);
+
+        }
+    
+    </script>
 </body>
 </html>

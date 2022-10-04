@@ -42,6 +42,12 @@ html{
 section{
     padding: 100px 0;
 }
+
+#conr{
+    display: flex;
+    margin-left: -20px;
+}
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -195,6 +201,7 @@ section .title::after{
     top: 0;
     right: 2%;
     border-radius: 10%;
+   
 }
 .home .max-width{
   width: 100%;
@@ -216,7 +223,7 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: rgb(20, 60, 220);
+    color: crimson;
     font-weight: 500;
 }
 .home .home-content a{
