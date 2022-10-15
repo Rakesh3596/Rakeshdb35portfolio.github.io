@@ -439,7 +439,9 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .ico div{
-  border: 2px solid rgb(102, 241, 241);
+  /* border: 2px solid  crimson; */
+  background-color: black;
+  border-radius: 10%;
   padding: 10px 10px;
 }
 .ico {
